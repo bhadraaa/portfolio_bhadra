@@ -1,0 +1,254 @@
+/* Import Tailwind's base styles */
+@tailwind base;
+
+/* Import Tailwind's component styles */
+@tailwind components;
+
+/* Import Tailwind's utility classes */
+@tailwind utilities;
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #8b5cf6, #4f46e5);
+  color: white;
+  text-align: center;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtext {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-button {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #8b5cf6;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #e5e7eb;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 50;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8b5cf6;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+
+}
+
+.navbar-links a {
+  color: #4b5563; /* gray-600 */
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #8b5cf6;
+}
+
+/* Section Headings */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #8b5cf6;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Project Cards */
+.project-card {
+  background: #f5f3ff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Styling */
+.footer {
+  padding: 1rem;
+  background: #8b5cf6;
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+}
+/* About Section Styling */
+.about-section {
+  padding: 2.5rem;
+  background: white;
+  color: #1f2937; /* text-gray-800 */
+  text-align: center;
+}
+
+.about-heading {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  font-size: 1.125rem; /* text-lg */
+  max-width: 40rem; /* max-w-2xl */
+  margin: 0 auto;
+  line-height: 1.6;
+}
+/* Achievements Section Styling */
+.achievements-section {
+  padding: 2.5rem;
+  background: #f3f4f6; /* bg-gray-100 */
+  text-align: center;
+}
+
+.achievements-heading {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.achievements-list {
+  list-style-type: disc;
+  text-align: left;
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  padding-left: 1.5rem;
+}
+
+.achievement-item {
+  margin-bottom: 0.75rem;
+}
+/* Skills Section Styling */
+.skills-section {
+  padding: 2.5rem;
+  background: #f3f4f6;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #8b5cf6;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill-item {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: #8b5cf6;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Projects Section Styling */
+.projects-section {
+  padding: 2.5rem;
+  background: white;
+  text-align: center;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  width: 18rem;
+  background: #ede9fe;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  color: #6b21a8;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.project-desc {
+  font-size: 1rem;
+}
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 2.5rem;
+  background: white;
+  text-align: center;
+}
+
+.contact-item {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: #374151; /* gray-700 */
+}
+
+/* Footer Styling */
+.footer {
+  padding: 1rem;
+  background: #8b5cf6;
+  color: white;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
