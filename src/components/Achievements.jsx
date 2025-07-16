@@ -10,7 +10,7 @@ function Achievements() {
 
   return (
     <section id="achievements" className="achievements-section">
-      <h2 className="achievements-heading">Achievements</h2>
+      <h2 className="section-title">Achievements</h2>
       <ul className="achievements-list">
         {achievements.map((item, index) => (
           <li key={index} className="achievement-item">{item}</li>

@@ -11,22 +11,33 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+.icons{
+ width: 30px;
+ height: 30px;
+ padding: 10px;
+ 
+}
 
 .hero-section {
+  text-align: 
+  justify;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #8b5cf6, #4f46e5);
+  background: linear-gradient(to bottom right, #0F172A, #021c58);
   color: white;
   text-align: center;
+  height: 600px;
 }
 
 .hero-heading {
-  font-size: 3rem;
-  font-weight: 700;
+  
+  font-size: 10rem;
+  font-weight: 800;
   margin-bottom: 1rem;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .hero-subtext {
@@ -58,7 +69,7 @@ body {
   
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background: #0f172a5b;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   z-index: 50;
 }
@@ -76,23 +87,30 @@ body {
 }
 
 .navbar-links a {
-  color: #4b5563; /* gray-600 */
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: #f1f0f5; /* gray-600 */
+  font-weight: 700;
+  text-decoration:wavy;
+  transition: color 0.5s ease;
+  width: 100%;
+  flex: auto;
+  height: 50px;
+  margin-top: 30px;
+  font-size:x-large;
+  margin-left: 30px;
 }
 
 .navbar-links a:hover {
-  color: #8b5cf6;
+  color: #10ebff;
 }
 
 /* Section Headings */
 .section-title {
-  font-size: 2.5rem;
+ font-size: 5rem;
   font-weight: 800;
-  color: #8b5cf6;
   margin-bottom: 1rem;
-  text-align: center;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: white;
+ text-align: center;
 }
 
 /* Project Cards */
@@ -112,24 +130,22 @@ body {
 /* Footer Styling */
 .footer {
   padding: 1rem;
-  background: #8b5cf6;
+  background: linear-gradient(to bottom right, #000000, #021c58);;
   color: white;
   text-align: center;
-  margin-top: 4rem;
+ 
 }
 /* About Section Styling */
 .about-section {
   padding: 2.5rem;
-  background: white;
-  color: #1f2937; /* text-gray-800 */
+  background: linear-gradient(to bottom right, #0F172A, #021c58);
+  color: #f7faff; /* text-gray-800 */
   text-align: center;
+  height: 600px;
+  padding-top: 200px;
 }
 
-.about-heading {
-  font-size: 2.25rem; /* text-4xl */
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
+
 
 .about-text {
   font-size: 1.125rem; /* text-lg */
@@ -140,14 +156,18 @@ body {
 /* Achievements Section Styling */
 .achievements-section {
   padding: 2.5rem;
-  background: #f3f4f6; /* bg-gray-100 */
+  background: linear-gradient(to top left, #0505bf, #000000);; /* bg-gray-100 */
   text-align: center;
+  height: 600px;
+  padding-top: 200px;
+  color: white;
 }
 
 .achievements-heading {
-  font-size: 2.25rem; /* text-4xl */
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: 10rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .achievements-list {
@@ -162,41 +182,27 @@ body {
 .achievement-item {
   margin-bottom: 0.75rem;
 }
-/* Skills Section Styling */
-.skills-section {
-  padding: 2.5rem;
-  background: #f3f4f6;
-  text-align: center;
-}
 
-.section-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #8b5cf6;
-}
 
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
 
-.skill-item {
-  padding: 0.75rem 1.5rem;
-  background: white;
-  color: #8b5cf6;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
+
+
+
+
+
+
+
+
 
 /* Projects Section Styling */
 .projects-section {
   padding: 2.5rem;
-  background: white;
+  background: linear-gradient(to top right, #0034ac, #000000);;
   text-align: center;
+  height: 600px;
+  align-items: center;
+  padding-top: 200px;
+  
 }
 
 .projects-list {
@@ -220,35 +226,39 @@ body {
   transform: scale(1.05);
 }
 
-.project-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
+
 
 .project-desc {
   font-size: 1rem;
 }
 
-/* Contact Section Styling */
+.resumeS{
+  width: 100%;
+  height: 1200px;
+  background: linear-gradient(to bottom right, #07064e, #000000);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.resumei{
+  width: 700px;
+  height: 1000px;
+  padding-left: 200px;
+}
+
 .contact-section {
   padding: 2.5rem;
-  background: white;
+  background: linear-gradient(to bottom right, #1512ba, #000000);
   text-align: center;
+  vertical-align:middle;
+  height: 600px;
 }
 
 .contact-item {
   font-size: 1.125rem;
   margin-bottom: 1rem;
-  color: #374151; /* gray-700 */
+  
+
+
+  color: white;
 }
 
-/* Footer Styling */
-.footer {
-  padding: 1rem;
-  background: #8b5cf6;
-  color: white;
-  text-align: center;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-}
