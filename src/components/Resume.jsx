@@ -87,15 +87,16 @@ function Resume() {
         <h2 className="section-title">MY RESUME</h2>
         <div className="resume-wrapper">
           <a
-            href="\portfolio_bhadra\src\assets\Bhadra_resume_v1.pdf"
-          
+            href="/Bhadra_resume_v1.pdf"
+            download
             className="download-btn"
           >
             Download Resume
           </a>
 
+
           <img
-            src="/src/assets/Resume-v1.png"
+            src={resume}
             alt="My Resume"
             className="resumei"
             onClick={handleImageClick}
