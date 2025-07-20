@@ -110,7 +110,7 @@ function Resume() {
         <div className="modal-overlay" onClick={handleClose}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img
-              src="/src/assets/Resume-v1.png"
+              src="Resume-v1.png"
               alt="Full Resume"
               className="resume-full"
             />

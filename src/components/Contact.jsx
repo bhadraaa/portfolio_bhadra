@@ -110,13 +110,13 @@ function Contact() {
         <div className="contact-icons">
           <p className="contact-item">bhadra.j05@gmail.com</p>
           <a href="https://www.linkedin.com/in/bhadra-j-6a1855257" target="_blank" rel="noreferrer">
-            <img className="icons" src="/src/assets/LinkedIn.png" alt="LinkedIn" />
+            <img className="icons" src="LinkedIn.png" alt="LinkedIn" />
           </a>
           <a href="https://www.instagram.com/bhad_.ra" target="_blank" rel="noreferrer">
-            <img className="icons" src="/src/assets/instagram.png" alt="Instagram" />
+            <img className="icons" src="instagram.png" alt="Instagram" />
           </a>
           <a href="https://github.com/bhadraaa" target="_blank" rel="noreferrer">
-            <img className="icons" src="/src/assets/git.png" alt="Github" />
+            <img className="icons" src="git.png" alt="Github" />
           </a>
         </div>
         <br />

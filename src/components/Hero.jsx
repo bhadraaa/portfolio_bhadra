@@ -196,7 +196,7 @@ function Hero() {
       <h1 className="hero-heading">HI, I'M BHADRA</h1>
 
       <motion.img
-        src="/src/assets/avatar.png"
+        src="avatar.png"
         alt="My Avatar"
         style={{ width: "300px", height: "300px" }}
         className="hero-avatar rounded-full mb-6 shadow-lg" // Combine with Tailwind if used
