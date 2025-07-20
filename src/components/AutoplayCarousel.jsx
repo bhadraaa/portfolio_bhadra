@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "../autoplaycarousel.css";
-import { cardDetails } from "./carousel-config";
-import CarouselItem from "./Caroselitem";
+import { skills } from "./carousel-config"; // Ensure this file has the skills array
+import { IconContext } from "react-icons";
 
 export default function AutoplayCarousel() {
   useEffect(() => {
@@ -79,12 +79,17 @@ export default function AutoplayCarousel() {
       ></div>
 
       <div style={{ position: "relative", zIndex: 1 }}>
-        <h1 className="section-title">Skills</h1>
-        <div className="carousel-track">
-          {[...cardDetails, ...cardDetails].map((detail, index) => (
-            <CarouselItem key={index} icon={detail.icon} title={detail.title} />
-          ))}
-        </div>
+        <h1 className="section-title">My Skills</h1>
+        <IconContext.Provider value={{ size: "2.5em", color: "#00eaff" }}>
+          <div className="skills-grid">
+            {skills.map((skill, index) => (
+              <div key={index} className="skill-card">
+                <div className="skill-icon">{skill.icon}</div>
+                <p className="skill-name">{skill.name}</p>
+              </div>
+            ))}
+          </div>
+        </IconContext.Provider>
       </div>
     </div>
   );

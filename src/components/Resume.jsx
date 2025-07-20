@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function Resume() {
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     if (window.particlesJS) {
       window.particlesJS("particles-js-resume", {
@@ -61,6 +63,9 @@ function Resume() {
     }
   }, []);
 
+  const handleImageClick = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+
   return (
     <section id="resume" className="resumeS" style={{ position: "relative" }}>
       {/* Particle Background */}
@@ -76,15 +81,40 @@ function Resume() {
         }}
       ></div>
 
-      {/* Content Overlay */}
+      {/* Content */}
       <div style={{ position: "relative", zIndex: 1 }}>
         <h2 className="section-title">MY RESUME</h2>
-        <img
-          src="/src/assets/Resume-v1.png"
-          alt="My Resume"
-          className="resumei"
-        />
+        <div className="resume-wrapper">
+          <a
+            href="/resume/Bhadra_Resume.pdf"
+            download
+            className="download-btn"
+          >
+            Download PDF
+          </a>
+
+          <img
+            src="/src/assets/Resume-v1.png"
+            alt="My Resume"
+            className="resumei"
+            onClick={handleImageClick}
+            style={{ cursor: "pointer" }}
+          />
+        </div>
       </div>
+
+      {/* Modal Preview */}
+      {isOpen && (
+        <div className="modal-overlay" onClick={handleClose}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img
+              src="/src/assets/Resume-v1.png"
+              alt="Full Resume"
+              className="resume-full"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
