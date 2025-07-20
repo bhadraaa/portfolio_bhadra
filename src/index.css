@@ -34,15 +34,14 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Inter', sans-serif; /* Keep if you want this specific font here */
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(to bottom right, #000000, #010c25);
     position: relative;
-    overflow: hidden; /* Important to contain particles within this section */
-    color: white;
-    z-index: 10; /* Ensure content is above background effects */
+    overflow: hidden; 
+    
+    z-index: 10; 
 }
 
-/* Space background with stars */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -124,14 +123,19 @@ body {
 
 /* Main content styles */
 .hero-heading {
-    font-size: 3rem; /* Adjust as needed */
-    margin-bottom: 1rem;
-    z-index: 10; /* Ensure it's above particles */
+    font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ color: white;
+ text-align: center;
 }
 
 .hero-subtext {
     font-size: 1.5rem; /* Adjust as needed */
     z-index: 10; /* Ensure it's above particles */
+    color: #feffff;
+    font-weight: 600;
 }
 
 .hero-avatar {
@@ -207,6 +211,7 @@ body {
   transform: scale(1.05);
 }
 
+
 /* Footer Styling */
 .footer {
   padding: 1rem;
@@ -275,45 +280,177 @@ body {
 
 
 
+/* Projects.css */
 
-/* Projects Section Styling */
 .projects-section {
-  padding: 2.5rem;
-  background: linear-gradient(to top right, #0034ac, #000000);;
-  text-align: center;
-  height: 100vh;
-  align-items: center;
-  padding-top: 200px;
-   border-radius: 25px;
-  
+  position: relative;
+  padding: 5rem 2rem;
+  background-color: #050c1b;
+  color: white;
+  overflow: hidden;
 }
 
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+.particles-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.projects-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.projects-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
 .project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
   padding: 1.5rem;
-  width: 18rem;
-  background: #ede9fe;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  color: #6b21a8;
-  transition: transform 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .project-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 212, 255, 0.3);
+  border-color: #00d4ff;
 }
 
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #444;
+}
 
+.project-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00d4ff;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
 
-.project-desc {
+.project-description {
+  text-align: center;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  padding: 2rem;
+}
+
+.modal {
+  background: #0f172a;
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  border: 1px solid #333;
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #00d4ff;
+}
+
+.modal-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #555;
+}
+
+.modal-description {
+  color: #ddd;
   font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
 }
+
+.modal-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn.github {
+  background-color: #333;
+}
+
+.btn.github:hover {
+  background-color: #555;
+}
+
+.btn.live {
+  background-color: #6b21a8;
+}
+
+.btn.live:hover {
+  background-color: #8b5cf6;
+}
+
 
 .resumeS{
   width: 100%;

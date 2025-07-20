@@ -1,6 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+// Ensure your CSS file path is correct
+
+const projects = [
+  {
+    name: "Choreoscope",
+    description:
+      "AI-based mudra recognition app using Flutter & DL. This project demonstrates advanced deep learning techniques applied to real-time gesture recognition.",
+    gitLink: "https://github.com/your-repo/choreoscope",
+    uiLink: "https://your-demo.com/choreoscope",
+    image: "https://placehold.co/600x400/00d4ff/ffffff?text=Choreoscope+UI",
+  },
+  {
+    name: "Automated Fish Feeder",
+    description:
+      "Smart aquaculture feeding system designed to optimize feeding schedules and reduce waste using IoT sensors and automated dispensers.",
+    gitLink: "https://github.com/your-repo/fish-feeder",
+    uiLink: "https://your-demo.com/fish-feeder",
+    image: "https://placehold.co/600x400/00d4ff/ffffff?text=Fish+Feeder+UI",
+  },
+  {
+    name: "JWST Stories",
+    description:
+      "Web app visualizing space telescope images interactively, allowing users to explore celestial phenomena with rich data overlays and narratives.",
+    gitLink: "https://github.com/your-repo/jwst-stories",
+    uiLink: "https://your-demo.com/jwst-stories",
+    image: "https://placehold.co/600x400/00d4ff/ffffff?text=JWST+Stories+UI",
+  },
+];
 
 function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     if (window.particlesJS) {
       window.particlesJS("particles-js-projects", {
@@ -61,46 +92,91 @@ function Projects() {
     }
   }, []);
 
-  const projects = [
-    {
-      title: "Choreoscope",
-      desc: "AI-based mudra recognition app using Flutter & DL.",
-    },
-    {
-      title: "Automated Fish Feeder",
-      desc: "Smart aquaculture feeding system.",
-    },
-    {
-      title: "JWST Stories",
-      desc: "Web app visualizing space telescope images interactively.",
-    },
-  ];
+  const openProjectModal = (project) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
+
+  const closeProjectModal = () => {
+    setSelectedProject(null);
+    setShowModal(false);
+  };
 
   return (
-    <section id="projects" className="projects-section" style={{ position: "relative" }}>
-      <div
-        id="particles-js-projects"
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          zIndex: 0,
-          top: 0,
-          left: 0,
-        }}
-      ></div>
+    <section id="projects" className="projects-section">
+      <div id="particles-js-projects" className="particles-background"></div>
 
-      <div style={{ position: "relative", zIndex: 1 }}>
-        <h2 className="section-title">Projects</h2>
-        <div className="projects-list">
+      <div className="projects-content">
+        <h2 className="projects-title">Projects</h2>
+        <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <h3 className="project-title">{project.title}</h3>
-              <p className="project-desc">{project.desc}</p>
+            <div
+              key={index}
+              className="project-card"
+              onClick={() => openProjectModal(project)}
+            >
+              <img
+                src={project.image}
+                alt={project.name}
+                className="project-image"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src =
+                    "https://placehold.co/600x400/4a5568/ffffff?text=Image+Not+Found";
+                }}
+              />
+              <h3 className="project-name">{project.name}</h3>
+              <p className="project-description">
+                {project.description.split(".")[0]}.
+              </p>
             </div>
           ))}
         </div>
       </div>
+
+      {showModal && selectedProject && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <button className="modal-close" onClick={closeProjectModal}>
+              &times;
+            </button>
+            <h2 className="modal-title">{selectedProject.name}</h2>
+            <img
+              src={selectedProject.image}
+              alt={selectedProject.name}
+              className="modal-image"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src =
+                  "https://placehold.co/600x400/4a5568/ffffff?text=Image+Not+Found";
+              }}
+            />
+            <p className="modal-description">{selectedProject.description}</p>
+            <div className="modal-links">
+              {selectedProject.gitLink && (
+                <a
+                  href={selectedProject.gitLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn github"
+                >
+                  GitHub
+                </a>
+              )}
+              {selectedProject.uiLink && (
+                <a
+                  href={selectedProject.uiLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn live"
+                >
+                  Live Demo
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
