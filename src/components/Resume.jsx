@@ -84,7 +84,7 @@ function Resume() {
 
       {/* Content */}
       <div style={{ position: "relative", zIndex: 1 }}>
-        <h2 className="section-title">MY RESUME</h2>
+        <h2 className="section-title">My Resume</h2>
         <div className="resume-wrapper">
           <a
             href="/Bhadra_resume_v1.pdf"
@@ -96,7 +96,7 @@ function Resume() {
 
 
           <img
-            src={resume}
+            src="Resume-v1.png"
             alt="My Resume"
             className="resumei"
             onClick={handleImageClick}
