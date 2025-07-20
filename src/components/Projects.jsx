@@ -6,7 +6,7 @@ const projects = [
     name: "Choreoscope",
     description:
       "AI-based mudra recognition app using Flutter & DL. This project demonstrates advanced deep learning techniques applied to real-time gesture recognition.",
-    gitLink: "https://github.com/your-repo/choreoscope",
+    gitLink: "https://github.com/bhadraaa/choreoscope_last_253",
     image: "/choreo.png",
   },
   
@@ -14,7 +14,7 @@ const projects = [
   name: "Offside Deals",
   description:
     "A platform providing exclusive football merchandise deals and transfer updates. Built using React and integrated with live football APIs for real-time data.",
-  gitLink: "https://github.com/your-repo/offside-deals", 
+  gitLink: "https://github.com/bhadraaa/OffSideDeals", 
   image: "/offside.png" 
 }
 
