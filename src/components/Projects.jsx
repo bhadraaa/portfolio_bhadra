@@ -7,25 +7,17 @@ const projects = [
     description:
       "AI-based mudra recognition app using Flutter & DL. This project demonstrates advanced deep learning techniques applied to real-time gesture recognition.",
     gitLink: "https://github.com/your-repo/choreoscope",
-    uiLink: "https://your-demo.com/choreoscope",
-    image: "https://placehold.co/600x400/00d4ff/ffffff?text=Choreoscope+UI",
+    image: "/src/assets/choreo.png",
   },
+  
   {
-    name: "Automated Fish Feeder",
-    description:
-      "Smart aquaculture feeding system designed to optimize feeding schedules and reduce waste using IoT sensors and automated dispensers.",
-    gitLink: "https://github.com/your-repo/fish-feeder",
-    uiLink: "https://your-demo.com/fish-feeder",
-    image: "https://placehold.co/600x400/00d4ff/ffffff?text=Fish+Feeder+UI",
-  },
-  {
-    name: "JWST Stories",
-    description:
-      "Web app visualizing space telescope images interactively, allowing users to explore celestial phenomena with rich data overlays and narratives.",
-    gitLink: "https://github.com/your-repo/jwst-stories",
-    uiLink: "https://your-demo.com/jwst-stories",
-    image: "https://placehold.co/600x400/00d4ff/ffffff?text=JWST+Stories+UI",
-  },
+  name: "Offside Deals",
+  description:
+    "A platform providing exclusive football merchandise deals and transfer updates. Built using React and integrated with live football APIs for real-time data.",
+  gitLink: "https://github.com/your-repo/offside-deals", 
+  image: "/src/assets/offside.png" 
+}
+
 ];
 
 function Projects() {
@@ -107,7 +99,7 @@ function Projects() {
       <div id="particles-js-projects" className="particles-background"></div>
 
       <div className="projects-content">
-        <h2 className="projects-title">Projects</h2>
+        <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div
@@ -163,16 +155,7 @@ function Projects() {
                   GitHub
                 </a>
               )}
-              {selectedProject.uiLink && (
-                <a
-                  href={selectedProject.uiLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn live"
-                >
-                  Live Demo
-                </a>
-              )}
+              
             </div>
           </div>
         </div>

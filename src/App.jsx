@@ -16,12 +16,15 @@ function App() {
     <div>
       <Navbar/>
       <Hero />
+      <div className="break"></div>
       <About />
        <AutoplayCarousel />
       <Projects/>
       <Achievements />
       <Resume/>
       <Contact />
+      <br />
+      <br />
       <Footer />
     </div>
   );

@@ -12,12 +12,15 @@
 
 
 
-
+.break{
+  width: 100%;
+  background-color: #fdffff;
+}
 
 /* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #000000;
+    font-family: 'Poppins', sans-serif;
+     background: linear-gradient(to bottom right, #000140, #010c25);
 }
 .icons{
  width: 30px;
@@ -35,7 +38,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(to bottom right, #000000, #010c25);
+
     position: relative;
     overflow: hidden; 
     
@@ -136,6 +139,7 @@ body {
     z-index: 10; /* Ensure it's above particles */
     color: #feffff;
     font-weight: 600;
+    text-align: center;
 }
 
 .hero-avatar {
@@ -148,82 +152,101 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  
+  width: 100%; /* fixed from 100vh */
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0f172a5b;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1rem 2rem;
+ margin: 1rem;
   z-index: 50;
+  
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 5.5rem;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #4900f5;
 }
 
 .navbar-links {
   display: flex;
   gap: 1.5rem;
-
 }
 
 .navbar-links a {
-  color: #f1f0f5; /* gray-600 */
+  color: #f1f0f5;
   font-weight: 700;
-  text-decoration:wavy;
-  transition: color 0.5s ease;
-  width: 100%;
-  flex: auto;
-  height: 50px;
-  margin-top: 30px;
-  font-size:x-large;
-  margin-left: 30px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 2.1rem;
+  margin-left: 7%;
 }
 
 .navbar-links a:hover {
   color: #10ebff;
 }
 
+/* Responsive for tablets and below */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-links a {
+    margin-left: 0;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Responsive for very small screens */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .navbar-links a {
+    font-size: 0.95rem;
+  }
+}
+
+
 /* Section Headings */
 .section-title {
- font-size: 5rem;
-  font-weight: 800;
+ font-size: 4rem;
+  font-weight: 700;
   margin-bottom: 1rem;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  color: white;
  text-align: center;
 }
 
-/* Project Cards */
-.project-card {
-  background: #f5f3ff;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
 
 
 /* Footer Styling */
 .footer {
   padding: 1rem;
-  background: linear-gradient(to bottom right, #000000, #021c58);;
+  background: linear-gradient(to bottom right, #0d0032, #00000000);;
   color: white;
   text-align: center;
+  height: 1rem;
+  width: 100%;
+  padding-top: 10px;
+   
  
 }
 /* About Section Styling */
 .about-section {
   padding: 2.5rem;
-  background: linear-gradient(to bottom right, #0F172A, #021c58);
+  
   color: #f7faff; /* text-gray-800 */
   text-align: center;
   height: 100vh;
@@ -239,55 +262,56 @@ body {
   margin: 0 auto;
   line-height: 1.6;
 }
-/* Achievements Section Styling */
+
+
 .achievements-section {
-  padding: 2.5rem;
-  background: linear-gradient(to top left, #0505bf, #000000);; /* bg-gray-100 */
-  text-align: center;
-  height: 100vh;
-  padding-top: 200px;
+  padding: 5rem 2rem;
+ 
   color: white;
-   border-radius: 25px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.achievements-heading {
-  font-size: 10rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .achievements-list {
-  list-style-type: disc;
-  text-align: left;
-  max-width: 40rem;
-  margin: 0 auto;
-  font-size: 1.125rem;
-  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  max-width: 700px;
+  margin: auto;
 }
 
-.achievement-item {
-  margin-bottom: 0.75rem;
+.achievement-card {
+  
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  color: #00e5ff;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.596);
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 201, 242, 0.3);
 }
 
 
 
-
-
-
-
-
-
-
-
-/* Projects.css */
 
 .projects-section {
-  position: relative;
   padding: 5rem 2rem;
-  background-color: #050c1b;
+ 
   color: white;
+  text-align: center;
+  position: relative;
   overflow: hidden;
+  border-radius: 25px;
 }
 
 .particles-background {
@@ -304,24 +328,21 @@ body {
   z-index: 1;
   max-width: 1200px;
   margin: auto;
+ 
+  border-radius: 25px;
 }
 
-.projects-title {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: white;
-}
+
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: linear-gradient(to top left, #d7d7e1, #000000);;;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -369,17 +390,19 @@ body {
   align-items: center;
   z-index: 50;
   padding: 2rem;
+  overflow-y: auto;
 }
 
 .modal {
   background: #0f172a;
   border-radius: 1rem;
   padding: 2rem;
-  max-width: 700px;
-  width: 100%;
+  width: 80%;
+  min-width: 200px;
   position: relative;
   border: 1px solid #333;
   box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3);
+  text-align: center;
 }
 
 .modal-close {
@@ -403,7 +426,8 @@ body {
 
 .modal-image {
   width: 100%;
-  height: 250px;
+  height: auto;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 0.75rem;
   margin-bottom: 1.5rem;
@@ -423,6 +447,36 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal {
+    padding: 1rem;
+  }
+
+  .modal-image {
+    max-height: 250px;
+  }
+
+  .modal-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .modal-description {
+    font-size: 0.9rem;
+  }
+}
+
 
 .btn {
   padding: 0.75rem 1.5rem;
@@ -455,7 +509,7 @@ body {
 .resumeS{
   width: 100%;
   height:100vh;
-  background: linear-gradient(to bottom right, #07064e, #000000);
+ 
   padding-top: 20px;
   padding-bottom: 20px;
    border-radius: 25px;
@@ -529,7 +583,7 @@ body {
 
 .contact-section {
   padding: 2.5rem;
-  background: linear-gradient(to bottom right, #1512ba, #000000);
+  
   text-align: center;
   vertical-align:middle;
   height: 100vh;
@@ -539,11 +593,62 @@ body {
 .contact-item {
   font-size: 1.125rem;
   margin-bottom: 1rem;
-  
-
-
   color: white;
 }
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #444;
+  background-color: #0f172a;
+  color: white;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00d4ff;
+}
+
+.contact-form button {
+  background-color: #00d4ff;
+  color: #050c1b;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00b0cc;
+}
+
+.status-message {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
 
 
 
@@ -571,5 +676,49 @@ body {
 }
 
 
+.carousel-container {
+  padding:3rem 2rem;
+  overflow-x: hidden;
+
+  color: white;
+  border-radius: 25px;
+  height: 100vh;
+
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #00eaff50;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #00eaff;
+}
+
+.skill-name {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+}
 
 

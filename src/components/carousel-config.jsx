@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3Alt, FaReact, FaJava, FaPython, FaNodeJs, FaJs } from "react-icons/fa";
-import { SiFlutter, SiMongodb, SiC } from "react-icons/si";
+import { SiFlutter, SiMongodb, SiC, SiFirebase } from "react-icons/si";
 
 export const skills = [
   { name: "HTML5", icon: <FaHtml5 /> },
@@ -10,8 +10,7 @@ export const skills = [
   { name: "C", icon: <SiC /> },
   { name: "Java", icon: <FaJava /> },
   { name: "MongoDB", icon: <SiMongodb /> },
-  { name: "Node.js", icon: <FaNodeJs /> },
-  { name: "Python", icon: <FaPython /> },
+  { name: "Firebase", icon: <SiFirebase /> },
 ];
 
 

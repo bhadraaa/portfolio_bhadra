@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaFilePdf } from "react-icons/fa";
 
 function Resume() {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,11 +87,11 @@ function Resume() {
         <h2 className="section-title">MY RESUME</h2>
         <div className="resume-wrapper">
           <a
-            href="/resume/Bhadra_Resume.pdf"
-            download
+            href="\portfolio_bhadra\src\assets\Bhadra_resume_v1.pdf"
+          
             className="download-btn"
           >
-            Download PDF
+            Download Resume
           </a>
 
           <img

@@ -56,11 +56,11 @@ function Achievements() {
   }, []);
 
   const achievements = [
-    "3rd Place — Hackspiration Hackathon",
-    "Top 10 — NASA Space Apps 2024",
-    "Shortlisted — Smart India Hackathon 2024",
-    "SQL Advanced — HackerRank",
-  ];
+  { title: "3rd Place — Hackspiration Hackathon" },
+  { title: "Top 10 — NASA Space Apps 2024" },
+  { title: "Shortlisted — Smart India Hackathon 2024" },
+  { title: "SQL Advanced — HackerRank" },
+];
 
   return (
     <section id="achievements" className="achievements-section" style={{ position: 'relative' }}>
@@ -75,11 +75,13 @@ function Achievements() {
 
       <div style={{ position: "relative", zIndex: 1 }}>
         <h2 className="section-title">Achievements</h2>
-        <ul className="achievements-list">
-          {achievements.map((item, index) => (
-            <li key={index} className="achievement-item">{item}</li>
-          ))}
-        </ul>
+        <div className="achievements-list">
+        {achievements.map((item, index) => (
+          <div key={index} className="achievement-card">
+            {item.title}
+          </div>
+        ))}
+      </div>
       </div>
     </section>
   );
