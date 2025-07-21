@@ -17,7 +17,6 @@ const projects = [
   gitLink: "https://github.com/bhadraaa/OffSideDeals", 
   image: "/offside.png" 
 }
-
 ];
 
 function Projects() {
@@ -118,9 +117,7 @@ function Projects() {
                 }}
               />
               <h3 className="project-name">{project.name}</h3>
-              <p className="project-description">
-                {project.description.split(".")[0]}.
-              </p>
+              
             </div>
           ))}
         </div>

@@ -222,7 +222,7 @@ body {
 /* Section Headings */
 .section-title {
  font-size: 4rem;
-  font-weight: 700;
+  font-weight: 650;
   margin-bottom: 1rem;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  color: white;
@@ -304,9 +304,9 @@ body {
 
 
 
+/* Projects Section */
 .projects-section {
   padding: 5rem 2rem;
- 
   color: white;
   text-align: center;
   position: relative;
@@ -328,21 +328,18 @@ body {
   z-index: 1;
   max-width: 1200px;
   margin: auto;
- 
   border-radius: 25px;
 }
-
-
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-
 }
 
+/* Project Card */
 .project-card {
-  background-color: linear-gradient(to top left, #d7d7e1, #000000);;;
+  background: linear-gradient(to top left, #1f2937, #000000);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1rem;
   padding: 1.5rem;
@@ -359,8 +356,9 @@ body {
 }
 
 .project-image {
-  width: 100%;
-  height: 180px;
+  width: 50%;
+  height: auto;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
@@ -381,6 +379,7 @@ body {
   font-size: 0.95rem;
 }
 
+/* Modal Overlay */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -393,12 +392,13 @@ body {
   overflow-y: auto;
 }
 
+/* Modal Content */
 .modal {
   background: #0f172a;
   border-radius: 1rem;
   padding: 2rem;
-  width: 80%;
-  min-width: 200px;
+  width: 100%;
+  max-width: 700px;
   position: relative;
   border: 1px solid #333;
   box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3);
@@ -419,9 +419,8 @@ body {
 .modal-title {
   font-size: 2rem;
   font-weight: bold;
-  text-align: center;
-  margin-bottom: 1.5rem;
   color: #00d4ff;
+  margin-bottom: 1.5rem;
 }
 
 .modal-image {
@@ -430,8 +429,8 @@ body {
   max-height: 400px;
   object-fit: cover;
   border-radius: 0.75rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #555;
+  margin-bottom: 1rem;
+  border: 1px solid #444;
 }
 
 .modal-description {
@@ -447,36 +446,6 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
 }
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .modal-title {
-    font-size: 1.5rem;
-  }
-
-  .modal {
-    padding: 1rem;
-  }
-
-  .modal-image {
-    max-height: 250px;
-  }
-
-  .modal-description {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .modal-title {
-    font-size: 1.25rem;
-  }
-
-  .modal-description {
-    font-size: 0.9rem;
-  }
-}
-
 
 .btn {
   padding: 0.75rem 1.5rem;
@@ -503,6 +472,48 @@ body {
 
 .btn.live:hover {
   background-color: #8b5cf6;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .modal {
+    padding: 1rem;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-image {
+    max-height: 300px;
+  }
+
+  .modal-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-name {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .modal-description {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 
