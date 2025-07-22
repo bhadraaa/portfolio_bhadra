@@ -200,7 +200,7 @@ function Hero() {
         alt="My Avatar"
         style={{ width: "300px", height: "300px" }}
         className="hero-avatar rounded-full mb-6 shadow-lg" // Combine with Tailwind if used
-        initial={{ x: -200, opacity: 0 }}
+       
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       />
