@@ -116,6 +116,7 @@ function Projects() {
                     "https://placehold.co/600x400/4a5568/ffffff?text=Image+Not+Found";
                 }}
                 loading="lazy"
+                fetchpriority="high"
               />
               <h3 className="project-name">{project.name}</h3>
               
@@ -141,6 +142,7 @@ function Projects() {
                   "https://placehold.co/600x400/4a5568/ffffff?text=Image+Not+Found";
               }}
               loading="lazy"
+              fetchpriority="high"
             />
             <p className="modal-description">{selectedProject.description}</p>
             <div className="modal-links">

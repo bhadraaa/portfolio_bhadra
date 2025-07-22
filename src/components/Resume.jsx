@@ -102,6 +102,7 @@ function Resume() {
             onClick={handleImageClick}
             style={{ cursor: "pointer" }}
             loading="lazy"
+            fetchpriority="high"
           />
         </div>
       </div>
@@ -115,6 +116,7 @@ function Resume() {
               alt="Full Resume"
               className="resume-full"
               loading="lazy"
+              fetchpriority="high"
             />
           </div>
         </div>
