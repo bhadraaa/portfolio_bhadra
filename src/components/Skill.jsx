@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import "../autoplaycarousel.css";
+
 import { skills } from "./carousel-config"; // Ensure this file has the skills array
 import { IconContext } from "react-icons";
 
-export default function AutoplayCarousel() {
+export default function SKills() {
   useEffect(() => {
     if (window.particlesJS) {
       window.particlesJS("particles-js-skills", {
@@ -63,6 +63,14 @@ export default function AutoplayCarousel() {
       });
     }
   }, []);
+  const soft_skills= [
+  { title: "Adaptability" },
+  { title: "Problem-Solving" },
+  { title: "Team Collaboration" },
+  { title: "Time Management" },
+  { title: "Growth Mindset" },
+  
+];
 
   return (
     <div id="skills" className="carousel-container" style={{ position: "relative" }}>
@@ -80,6 +88,7 @@ export default function AutoplayCarousel() {
 
       <div style={{ position: "relative", zIndex: 1 }}>
         <h1 className="section-title">My Skills</h1>
+        <h2 className="skill-two-section">Tech Skills</h2>
         <IconContext.Provider value={{ size: "2.5em", color: "#00eaff" }}>
           <div className="skills-grid">
             {skills.map((skill, index) => (
@@ -90,6 +99,12 @@ export default function AutoplayCarousel() {
             ))}
           </div>
         </IconContext.Provider>
+        <h2 className="skill-two-section">Soft Skills</h2>
+            {soft_skills.map((item, index) => (
+          <div key={index} className="soft_skill-card">
+            {item.title}
+          </div>
+        ))}
       </div>
     </div>
   );
