@@ -69,8 +69,7 @@ function About() {
       <div style={{ position: "relative", zIndex: 1 }}>
         <h2 className="section-title">About Me</h2>
         <p className="about-text">
-          I’m a passionate Computer Science student at Amal Jyothi College of Engineering,
-          exploring Flutter, AI, and web development. I love building apps and solutions that solve real-world problems.
+          Hi, I’m Bhadra—a computer science student passionate about turning ideas into impactful digital solutions. I enjoy building intuitive apps and websites, exploring AI, and leading creative tech projects, especially those that blend accessibility, education, and culture. Always curious, always building.
         </p>
       </div>
     </section>
