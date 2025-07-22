@@ -115,6 +115,7 @@ function Projects() {
                   e.target.src =
                     "https://placehold.co/600x400/4a5568/ffffff?text=Image+Not+Found";
                 }}
+                loading="lazy"
               />
               <h3 className="project-name">{project.name}</h3>
               
@@ -139,6 +140,7 @@ function Projects() {
                 e.target.src =
                   "https://placehold.co/600x400/4a5568/ffffff?text=Image+Not+Found";
               }}
+              loading="lazy"
             />
             <p className="modal-description">{selectedProject.description}</p>
             <div className="modal-links">

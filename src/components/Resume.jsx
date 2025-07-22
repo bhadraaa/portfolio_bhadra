@@ -101,6 +101,7 @@ function Resume() {
             className="resumei"
             onClick={handleImageClick}
             style={{ cursor: "pointer" }}
+            loading="lazy"
           />
         </div>
       </div>
@@ -113,6 +114,7 @@ function Resume() {
               src="Resume-v1.png"
               alt="Full Resume"
               className="resume-full"
+              loading="lazy"
             />
           </div>
         </div>
